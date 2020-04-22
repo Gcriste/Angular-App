@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { User } from '../../models/User';
+import { User } from '../../models/User'; 
+
 @Component({
   selector: 'app-users',
   templateUrl: './users.component.html',
@@ -15,48 +16,51 @@ export class UsersComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+   
       this.users = [
-      {
-       firstName: 'Griffin',
-       lastName: 'Criste',
-       age: 29,
-       address:{
-           street: '50 main street',
-           city: 'Nashville',
-           state: 'TN'
-       },
-       isActive: true,
-       registered: new Date('01/02/2020 08:30:00')
-   },
-    {
-     firstName: 'Kevin',
-     lastName: 'Bacion',
-     age: 70,
-     address:{
-         street: '225 school street',
-         city: 'Boston',
-         state: 'MA'
-     },
-     isActive: false,
-     registered: new Date('03/12/2019 06:30:00')
- },
-  {
-   firstName: 'Karen',
-   lastName: 'Williams',
-   age: 23,
-   address:{
-       street: '583 Mill Street',
-       city: 'Austin',
-       state: 'TX'
-   },
-   isActive: true,
-   registered: new Date('11/02/2018 10:30:00')
-}
-   ];
-   this.loaded = true;
+        {
+          firstName: 'John',
+          lastName: 'Doe',
+          age: 70,
+          address: {
+            street: '50 Main st',
+            city: 'Boston',
+            state: 'MA'
+          },
+          isActive: true,
+          registered: new Date('01/02/2018 08:30:00')
+        },
+        {
+          firstName: 'Kevin',
+          lastName: 'Johnson',
+          age: 34,
+          address: {
+            street: '20 School st',
+            city: 'Lynn',
+            state: 'MA'
+          },
+          isActive: false,
+          registered: new Date('03/11/2017 06:20:00')
+        },
+        {
+          firstName: 'Karen',
+          lastName: 'Williams',
+          age: 26,
+          address: {
+            street: '55 Mill st',
+            city: 'Miami',
+            state: 'FL'
+          },
+          isActive: true,
+          registered: new Date('11/02/2016 10:30:00')
+        }
+      ];
+
+      this.loaded = true;
   }
 
-  addUser(user: User){
+  addUser(user: User) {
     this.users.push(user);
   }
+  
 }
